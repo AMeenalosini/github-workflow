@@ -1,0 +1,1 @@
+Created a Personal website with the Home, About and Index pages
