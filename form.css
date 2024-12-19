@@ -1,0 +1,142 @@
+body {
+   display: flex;
+    height: 40vh;
+    background-color: #9c4e4e !important; 
+} 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    width: 600%;
+}
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5pt;
+}
+.circle1 {
+    width: 100px;       /* Set the width of the circle */
+    height: 100px;      /* Set the height of the circle */
+    background-color: #3498db; /* Choose a background color */
+    border-radius: 50%; /* This makes the element a circle */
+    display: block;     /* Ensure it's treated as a block element */
+    margin: 50px auto;  /* Center the circle horizontally with margin */
+  }
+  .triangle {
+    width: 0;            /* Set width to 0, we don't need an actual width */
+    height: 0;           /* Set height to 0, we don't need an actual height */
+    border-left: 50px solid transparent;   /* Make left border transparent */
+    border-right: 50px solid transparent;  /* Make right border transparent */
+    border-bottom: 100px solid #3498db;   /* The color of the triangle */
+  }
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .grid-container > .person > .head {
+    width: 50px;
+    height: 50px;
+    background-color: #f39c12; /* Head color */
+    border-radius: 50%; /* Make it a circle */
+    margin-bottom: 10px;
+  }
+  
+  .body {
+    width: 10px;
+    height: 100px;
+    background-color: #2c3e50; /* Body color */
+    margin-bottom: 20px;
+  }
+  
+  .arms {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+  }
+  
+  .arm {
+    width: 40px;
+    height: 10px;
+    background-color: #16a085; /* Arm color */
+  }
+  
+  .legs {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin-top: 10px;
+  }
+  
+  .leg {
+    width: 40px;
+    height: 10px;
+    background-color: #2c3e50; /* Leg color */
+  }
+  .box {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    color: white;
+    border: 3px solid #000;
+    border-radius: 10px;
+  }
+  #box1 {
+    background-color: red;
+    z-index: 1;
+    top: 50px;
+    left: 50px;
+  }
+  
+  #box2 {
+    background-color: green;
+    z-index: 3;
+    top: 100px;
+    left: 100px;
+  }
+  
+  #box3 {
+    background-color: blue;
+    z-index: 2;
+    top: 150px;
+    left: 150px;
+  }
+  overlap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .square {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    position: relative; /* Position context for z-index */
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    position: absolute;
+    top: 25px; /* Adjust to place it partially over the square */
+    left: 25px; /* Adjust to place it partially over the square */
+    z-index: 10; /* Ensure the circle appears above the square */
+  }
+  @media screen and (min-width: 400px) and (max-width: 1799px) and (min-height: 300px) and (max-height: 1100px) {
+    body {
+      background-color: lightgreen;
+    }
+}
